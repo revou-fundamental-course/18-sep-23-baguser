@@ -175,6 +175,11 @@ button {
   margin-bottom: 30px;
 }
 
+button:hover {
+  background: rgb(59, 59, 85);
+  cursor: pointer;
+}
+
 /* provider  */
 .provider h3 {
   margin-bottom: 20px;
