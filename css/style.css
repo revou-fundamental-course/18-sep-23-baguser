@@ -43,6 +43,18 @@ body {
   color: aqua;
 }
 
+.navbar-extra {
+  display: none;
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+}
+
+.navbar .navbar-extra a:hover {
+  cursor: pointer;
+  color: aquamarine;
+}
 /* home */
 
 .home {
@@ -187,7 +199,8 @@ button:hover {
 .fitur {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 17px;
 }
 
 .angka {
@@ -281,6 +294,7 @@ hr.kedua {
 .callUs p {
   text-align: center;
   width: 700px;
+  font-size: 18px;
   margin-bottom: 4rem;
 }
 
@@ -302,4 +316,125 @@ footer a {
 footer a:hover {
   color: aqua;
   cursor: pointer;
+}
+
+/* responsive */
+
+@media (max-width: 810px) {
+  html {
+    font-size: 70%;
+  }
+
+  .navbar-extra {
+    display: inline-block;
+  }
+
+  .navbar .navbar-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 20rem;
+    height: 50vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar .navbar-menu a {
+    color: #971717;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-menu a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-menu a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* contact */
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  aside .about .warp .quote img {
+    height: 300px;
+  }
+
+  .callUs p {
+    width: 400px;
+  }
+}
+
+@media (max-width: 470px) {
+  html {
+    font-size: 60%;
+  }
+
+  aside .about .warp .quote img {
+    height: 250px;
+  }
+
+  aside .about .warp .images img {
+    height: 80px;
+  }
+
+  aside .about .warp .images h3 {
+    font-size: 18px;
+  }
+
+  aside .about .warp .images p {
+    font-size: 15px;
+  }
+
+  hr.pertama {
+    width: 150px;
+    margin: 30px 0 40px 100px;
+    border: 2px solid rgb(56, 55, 55);
+  }
+
+  .provider h3 {
+    font-size: 20px;
+  }
+
+  .manfaat {
+    width: 300px;
+  }
+
+  article .contact {
+    width: 200px;
+  }
+
+  .contact .contact-form .form-group input {
+    height: 30px;
+    width: 150px;
+  }
+  .contact .contact-form .form-group .option {
+    width: 170px;
+    height: 30px;
+  }
+
+  .contact-form button {
+    width: 100px;
+  }
+  .ourPackage .row .package {
+    width: 250px;
+  }
+
+  /* .callUs h1 {
+    max-width: 250px;
+  } */
+  .callUs p {
+    max-width: 200px;
+  }
 }
